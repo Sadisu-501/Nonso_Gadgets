@@ -120,6 +120,35 @@
   transition: all 200ms ease-in-out 200ms;
 }
 
+/* FEATURED PRODUCTS SECTION */
+.featured-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  font-family: "inter", sans-serif;
+  margin: 1.5rem 0;
+}
+.featured-section h2 {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-family:  "inter";
+}
+.featured-section a {
+  text-decoration: none;
+  background-color: var(--button-color);
+  color: var(--card-background);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  box-shadow: rgba(99, 99, 99, 0.5) 1px 5px 8px 0px;
+  font-size: 0.8rem;
+}
+.featured-section a:hover {
+  background-color: var(--secondary-color);
+  transition: all 1s ease-in-out 200ms;
+}
+
 /* media query for small screen devices */
 @media (max-width: 480px) {
   .hero-text {
@@ -138,6 +167,16 @@
     padding: 0.5rem 1rem;
     font-size: 0.7rem;
     width: 90%;
+  }
+  .featured-section h2 {
+    font-size: 1.2rem;
+  }
+  .featured-section a {
+    font-size: 0.7rem;
+  }
+  .featured-section {
+    padding: 0.5rem 1rem;
+    margin: 0.7rem 0;
   }
 }
 
@@ -167,5 +206,29 @@
 
   .nav-container button {
     display: none;
+  }
+  .hero-text {
+    padding: 0rem 0rem;
+  }
+  .hero-text h1 {
+    color: var(--card-background);
+    font-size: 1.1rem;
+  }
+  .hero-text p {
+    font-size: 0.8rem;
+    max-width: 60ch;
+    font-family: sans-serif;
+  }
+  .hero-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    width: 90%;
+  }
+  .hero-text {
+    padding: 0rem 0rem;
+  }
+  .hero-container img {
+    max-width: 200px;
+    height: 280px;
   }
 }
