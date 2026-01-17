@@ -66,7 +66,7 @@
 
 /* hero section styles */
 .hero-container {
-  background: linear-gradient(to right, #426bce, #091530);
+  background: linear-gradient(to right, hsl(222, 96%, 21%), #070e1e);
   border-radius: 10px;
   height: 50vh;
   width: 95%;
@@ -133,7 +133,7 @@
   color: var(--text-color);
   font-weight: 600;
   font-size: 1.4rem;
-  font-family:  "inter";
+  font-family: "inter";
 }
 .featured-section a {
   text-decoration: none;
@@ -149,48 +149,39 @@
   transition: all 1s ease-in-out 200ms;
 }
 
-/* media query for small screen devices */
-@media (max-width: 480px) {
-  .hero-text {
-    padding: 0rem 0rem;
-  }
-  .hero-text h1 {
-    color: var(--card-background);
-    font-size: 1rem;
-  }
-  .hero-text p {
-    font-size: 0.7rem;
-    max-width: 30ch;
-    font-family: sans-serif;
-  }
-  .hero-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.7rem;
-    width: 90%;
-  }
-  .featured-section h2 {
-    font-size: 1.2rem;
-  }
-  .featured-section a {
-    font-size: 0.7rem;
-  }
-  .featured-section {
-    padding: 0.5rem 1rem;
-    margin: 0.7rem 0;
-  }
+/* featured cards section */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  font-family: "inter", sans-serif;
+  background-color: var(--card-background);
+}
+.card {
+  width: 300px;
+  height: 400px;
+  padding: 1rem;
+  margin: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.card img {
+  width: 100%;
+  height: 80%;
+  border-radius: 8px;
 }
 
 /* Responsive styles for laptop devices */
 @media (max-width: 768px) {
   .nav-contents {
     position: absolute;
-    top: 40px;
+    top: 48px;
     right: 0;
     background-color: #e6e2e2;
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
-    height: 40vh;
+    height: 50vh;
     width: 100%;
     display: none;
   }
@@ -230,5 +221,54 @@
   .hero-container img {
     max-width: 200px;
     height: 280px;
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* media query for small screen devices */
+@media (max-width: 480px) {
+  .hero-container {
+    justify-content: center;
+  }
+  .hero-container img {
+    display: none;
+  }
+
+  .hero-text {
+    padding: 0rem 0rem;
+  }
+
+  .hero-text h1 {
+    color: var(--card-background);
+    font-size: 1rem;
+  }
+
+  .hero-text p {
+    font-size: 0.7rem;
+    max-width: 30ch;
+    font-family: sans-serif;
+    line-height: 1rem;
+  }
+
+  .hero-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    width: 100%;
+  }
+
+  .featured-section h2 {
+    font-size: 1rem;
+  }
+  .featured-section a {
+    font-size: 0.7rem;
+  }
+  .featured-section {
+    padding: 0.5rem 1rem;
+    margin: 0.7rem 0;
+  }
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
